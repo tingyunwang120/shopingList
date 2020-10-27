@@ -44,3 +44,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+backend/images/pork-leg.jpeg-1602802110663.jpg
+backend/node_modules
+front-end/node_modules

@@ -1,0 +1,73 @@
+<!-- <mat-toolbar color="primary">
+  <span>Our Shopping List</span>
+</mat-toolbar> -->
+<div class="title">New List
+</div>
+<div class="sort">
+  <button mat-raised-button (click)="orderData('type', 'asc')">
+    <mat-icon>sort</mat-icon>sort
+  </button>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Dish Group</mat-label>
+    <input matInput type="text" [(ngModel)]='groupName'>
+  </mat-form-field>
+  <button mat-raised-button (click)="groupData()">
+    group
+  </button>
+</div>
+<div class="deleteGroup" *ngFor='let item of groups'>
+  <button mat-stroked-button color="accent" aria-label="delete" (click)="deleteDish(item)">{{item}}<mat-icon>
+      delete_forever
+    </mat-icon>
+
+  </button>
+</div>
+
+
+<app-tabletemplate [dataSource]="dataSource" [selection] = 'selection'  [list] = 'list' [icons] = 'icons'
+[iconValues] = 'iconValues' [form]='form' [displayedColumns] = 'displayedColumns' [template] = '"list"'
+></app-tabletemplate>
+
+<div class="entry">
+  <form [formGroup]='form' (submit)="add()">
+    <mat-form-field class="example-form-field">
+      <mat-label>Item name</mat-label>
+      <input matInput type="text" formControlName="name">
+      <button mat-button *ngIf="form.get('name').valid" matSuffix mat-icon-button aria-label="Clear"
+        (click)="this.form.patchValue({ name: null });">
+        <mat-icon>close</mat-icon>
+      </button>
+      <button mat-button *ngIf="form.get('name').valid" matSuffix mat-icon-button aria-label="Add" type="submit">
+        <mat-icon>add_shopping_cart</mat-icon>
+      </button>
+    </mat-form-field>
+
+
+    <mat-radio-group formControlName="type" class='radio' aria-label="Select an option">
+      <div class="radioIconGroup" *ngFor="let icon of icons;let i=index">
+        <div class="radioIcon">
+          <fa-icon class="{{iconValues[i]}}" [icon]="icon"></fa-icon>
+        </div>
+        <mat-radio-button value="{{iconValues[i]}}">
+        </mat-radio-button>
+      </div>
+    </mat-radio-group>
+
+
+
+
+
+    <button mat-stroked-button type="button" (click)="filePicker.click()">Pick Image</button>
+    <input type="file" #filePicker accept="image/jpg" (change)="onImagePicked($event)">
+
+    <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid">
+      <img [src]="imagePreview" [alt]="form.value.title">
+    </div>
+  </form>
+</div>
+<div class="open">
+  <button mat-raised-button (click)="openBottomSheet()">Open Historical Items</button>
+
+</div>
+<!-- <app-history></app-history> -->

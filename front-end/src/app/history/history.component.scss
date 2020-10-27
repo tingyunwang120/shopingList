@@ -1,0 +1,125 @@
+mat-toolbar{
+    position: sticky;
+    top:0;
+}
+table{
+    padding: 10px 10px;
+}
+.title{
+    text-align: center;
+    color: lightseagreen;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.newList{
+    margin: 10px 20px;
+    border: lightgrey 3px solid;
+    border-radius: 10px;
+    overflow-y: scroll;
+    height: 300px;
+}
+.mat-table thead{
+    display: none;
+}
+.mat-header-row{
+    //background-color: lightyellow;
+    display: none !important;
+}
+.mat-column-name{
+    width:50%;
+}
+.done{
+    margin: 10px 20px;
+    border: lightgrey 3px solid;
+    border-radius: 10px;
+}
+.list {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-bottom: 3px grey solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    //vertical-align: bottom;
+}
+
+.content {
+    margin: 0 10px;
+    padding-top: 20px;
+    display: inline-block;
+}
+.buttons {
+    display: inline-block;
+    text-align: right;
+}
+
+.buttons button {
+    margin: 0 5px;
+}
+.content:focus {
+    outline: none;
+}
+.veg{
+    color: green;
+  
+}
+.meat{
+    color: indianred;   
+}
+.radio mat-radio-button{
+    margin:0 10px
+}
+.toilet{
+    color: lightblue;
+}
+table {
+    width: 100%;
+  }
+td:focus {
+    outline: none;
+}
+.title{
+    text-align: center;
+    color: lightseagreen;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.post-image {
+    width: 100%;
+  }
+  
+  .post-image img {
+    width: 10%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+  .mat-column-option {
+    width: 100px;
+    padding-right: 0;
+}
+.mat-column-name {
+    width: 120px;
+    margin: 0;
+}
+.mat-column-img {
+    width: 40px;
+}
+.mat-column-type {
+    width: 15px;
+}
+.table-image img {
+    width: 40px;
+}
+.radioIconGroup{
+text-align: center;
+display: inline-block;
+}
+
+th.mat-header-cell:last-of-type, td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type{
+    padding-right: 0;
+}
+.other{
+    color: rgb(198, 88, 231);
+}
