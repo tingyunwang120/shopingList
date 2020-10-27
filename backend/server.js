@@ -46,7 +46,7 @@ const listSchema = mongoose.Schema({
 const List = mongoose.model('ListTest', listSchema);
 mongoose
   .connect(
-    "mongodb+srv://Tingyun:edcrfvt1@cluster0.yz1h9.mongodb.net/<dbname>?retryWrites=true&w=majority"
+    "**********"
     , { useNewUrlParser: true })
   .then(() => {
     console.log("Connected to database!!!!!!!!");
